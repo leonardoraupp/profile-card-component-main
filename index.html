@@ -1,43 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Profile card component</title>
+  <!-- <link href="https://fonts.google.com/specimen/Kumbh+Sans" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kumbh+Sans">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+  <title>Frontend Mentor | Profile card component</title>
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    /* main {
+            grid-area: conteudo;
+        }
+
+        footer {
+            grid-area: rodape;
+        }
+
+    body {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "conteudo" "rodape";
+      
+    }  */
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
     body {
       background-color: hsl(185, 75%, 39%);
       background-image: url("images/bg-pattern-bottom.svg");
+      font-family: "Kumbh Sans", sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flexbox-container {
+      display: flex;
+      margin-top: 400px;
+      height: 400px;
+      width: 350px;
+      border-radius: 5%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .header {
+      height: 150px;
+      width: 350px;
+      border-top-left-radius: 5%;
+      border-top-right-radius: 5%;
+      background-image: url("images/bg-pattern-card.svg");
+
+    }
+
+    .user-image {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-top: 25%;
+      border: solid 6px #fff;
+    }
+
+    #first-item {
+      margin-top: 3em;
+    }
+
+    .name {
+      margin-right: 3%;
+      font-weight: bold;
+
+
+    }
+
+    .likes {
+      font-weight: bolder;
+    }
+
+    .body {
+      height: 300px;
+      width: 350px;
+    }
+
+    .flex-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    #network {
+      margin-left: 3em;
+      margin-right: 3em;
+      justify-content: space-between;
     }
   </style>
 </head>
+
 <body>
-  <main>
-  Leonardo Raupp
-  22
-  Brazil
-
-  80K
-  Followers
-
-  803K
-  Likes
-
-  1.4K
-  Photos
-</main>
-<footer>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/leonardoraupp">Leonardo Raupp</a>.
+  <div class="flexbox-container">
+    <div class="header">
+      <div class="flex-item">
+        <img src="images/image-leonardo.png" alt="User image" class="user-image">
+      </div>
+    </div>
+    <div class="body">
+      <div class="flex-item" id="first-item">
+        <h3 class="name">Leonardo Raupp</h3>
+        <h3>22</h3>
+      </div>
+      <div class="flex-item">
+        <div>
+          <h4 id="country">Brazil</h4>
+        </div>
+      </div>
+      <div class="flex-item" id="network">
+        <div>
+          <p class="likes">80K</p>
+          <h5>Followers</h5>
+        </div>
+        <div>
+          <p class="likes">803K</p>
+          <h5>Likes</h5>
+        </div>
+        <div>
+          <p class="likes">1.4K</p>
+          <h5>Photos</h5>
+        </div>
+      </div>
+    </div>
   </div>
-</footer>
+  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/leonardoraupp">Leonardo Raupp</a>.
+    </div>
+  </footer>
 </body>
+
 </html>
